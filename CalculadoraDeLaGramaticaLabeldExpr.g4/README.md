@@ -9,3 +9,5 @@
 - Sistema: Kali / Debian / Ubuntu.
 - Conexión a Internet (para descargar ANTLR si no lo tienes).
 - Permisos para usar sudo para instalar paquetes opcionales.
+
+-- Instalar Java
