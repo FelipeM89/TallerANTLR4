@@ -225,7 +225,8 @@ echo -e "a=5\nb=2\na+b*3\n(a+b)*3\n" | java -cp .:"$ANTLR_JAR" Calc
 ```
 para ver el arbol
 ```bash
-grun LabeledExpr prog -tree
+alias grun='java -cp ".:/usr/local/lib/antlr-4.13.1-complete.jar" org.antlr.v4.gui.TestRig'
+grun LabeledExpr prog -gui
 ```
 modo interactivo 
 ```bash
