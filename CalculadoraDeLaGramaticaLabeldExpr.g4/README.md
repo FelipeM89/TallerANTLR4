@@ -241,3 +241,13 @@ rm -f LabeledExpr*.java
 java -jar "$ANTLR_JAR" -visitor -no-listener LabeledExpr.g4
 javac -cp .:"$ANTLR_JAR" *.java
 ```
+## **Ejemplos**
+<img width="465" height="169" alt="Screenshot From 2025-08-31 16-58-17" src="https://github.com/user-attachments/assets/1d2b9f8c-f3fd-4d80-b183-f3321ed97cee" />
+
+
+---
+<img width="778" height="584" alt="Screenshot From 2025-08-31 16-59-28" src="https://github.com/user-attachments/assets/23b4982f-cfc2-42b9-8c7d-9fa6a9756aca" />
+
+
+
+
