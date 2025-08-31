@@ -11,3 +11,9 @@
 - Permisos para usar sudo para instalar paquetes opcionales.
 
 -- Instalar Java
+     ```bash
+     sudo apt update
+     sudo apt install default-jdk -y
+     java -version    # verifica que exista
+     javac -version   # verifica compilador
+
