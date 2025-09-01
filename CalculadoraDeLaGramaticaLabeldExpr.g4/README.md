@@ -4,12 +4,6 @@
 
 *Objetivo: preparar el entorno, generar la calculadora del capítulo 4 (gramática LabeledExpr.g4), compilarla, ejecutarla, y mostrar cómo ver el árbol sintáctico. También incluye solución de problemas comunes.*
 
-1. Requisitos
-
-- Sistema: Kali / Debian / Ubuntu.
-- Conexión a Internet (para descargar ANTLR si no lo tienes).
-- Permisos para usar sudo para instalar paquetes opcionales.
-
  -- Instalar Java
 ```bash
       sudo apt update
@@ -18,14 +12,14 @@
       javac -version   # verifica compilador
 ```
 
-2.Descargar ANTLR (JAR)
+Descargar ANTLR (JAR)
 Descarga el complete jar de ANTLR y colócalo en /usr/local/lib (ruta usada en esta guía).
 ```bash
 sudo mkdir -p /usr/local/lib
 sudo wget -O /usr/local/lib/antlr-4.13.2-complete.jar https://www.antlr.org/download/antlr-4.13.2-complete.jar
 ls -l /usr/local/lib/antlr-4.13.2-complete.jar
 ```
-3. Configurar alias / variables (opcional pero práctico)
+Configurar alias / variables (opcional pero práctico)
 Añade estas líneas a ~/.bashrc o ~/.zshrc (según tu shell). Si usas zsh, modifica ~/.zshrc.
 ```bash
 # coloca en ~/.bashrc o ~/.zshrc
@@ -41,7 +35,7 @@ source ~/.bashrc
 # si usas zsh
 source ~/.zshrc
 ```
-4. Crear proyecto (archivos fuente)
+Crear proyecto (archivos fuente)
 Crea un directorio de trabajo y guarda los archivos.
 ```bash
 # directorio del proyecto
@@ -186,7 +180,7 @@ EOF
 ```
 **Guárdalo como Calc.java.**
 
-5. Generar código ANTLR (lexer, parser, visitor)
+   Generar código ANTLR (lexer, parser, visitor)
    Desde ~/antlr-calc ejecuta:
 ```bash
    # usando alias antlr4 (si lo configuraste)
