@@ -53,8 +53,7 @@ public class EvalVisitor extends LabeledExprBaseVisitor<Integer> {
        } else { // división
             if (right == 0) {
                 System.err.println("⚠️ Error: división por cero");
-                return Double.NaN; // o Double.POSITIVE_INFINITY si prefieres
-       }
+                return Double.NaN; 
        return left / right;
      } 
    }
