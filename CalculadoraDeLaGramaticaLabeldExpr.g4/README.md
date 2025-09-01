@@ -22,14 +22,14 @@
 Descarga el complete jar de ANTLR y colócalo en /usr/local/lib (ruta usada en esta guía).
 ```bash
 sudo mkdir -p /usr/local/lib
-sudo wget -O /usr/local/lib/antlr-4.13.1-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar
-ls -l /usr/local/lib/antlr-4.13.1-complete.jar
+sudo wget -O /usr/local/lib/antlr-4.13.2-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar
+ls -l /usr/local/lib/antlr-4.13.2-complete.jar
 ```
 3. Configurar alias / variables (opcional pero práctico)
 Añade estas líneas a ~/.bashrc o ~/.zshrc (según tu shell). Si usas zsh, modifica ~/.zshrc.
 ```bash
 # coloca en ~/.bashrc o ~/.zshrc
-export ANTLR_JAR="/usr/local/lib/antlr-4.13.1-complete.jar"
+export ANTLR_JAR="/usr/local/lib/antlr-4.13.2-complete.jar"
 export CLASSPATH=".:$ANTLR_JAR:$CLASSPATH"
 alias antlr4='java -jar "$ANTLR_JAR"'
 alias grun='java -cp "$ANTLR_JAR":. org.antlr.v4.gui.TestRig'
@@ -48,7 +48,7 @@ Crea un directorio de trabajo y guarda los archivos.
 mkdir -p ~/antlr-calc
 cd ~/antlr-calc
 
-# si tu JAR está en /usr/local/lib y se llama antlr-4.13.1-complete.jar:
+# si tu JAR está en /usr/local/lib y se llama antlr-4.13.2-complete.jar:
 ANTLR_JAR=/usr/local/lib/antlr-4.13.2-complete.jar
 
 # verifica que exista
