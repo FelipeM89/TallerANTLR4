@@ -22,7 +22,7 @@
 Descarga el complete jar de ANTLR y colócalo en /usr/local/lib (ruta usada en esta guía).
 ```bash
 sudo mkdir -p /usr/local/lib
-sudo wget -O /usr/local/lib/antlr-4.13.2-complete.jar https://www.antlr.org/download/antlr-4.13.1-complete.jar
+sudo wget -O /usr/local/lib/antlr-4.13.2-complete.jar https://www.antlr.org/download/antlr-4.13.2-complete.jar
 ls -l /usr/local/lib/antlr-4.13.2-complete.jar
 ```
 3. Configurar alias / variables (opcional pero práctico)
