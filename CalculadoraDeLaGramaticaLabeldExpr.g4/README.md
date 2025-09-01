@@ -203,21 +203,7 @@ Se generarán archivos como:
 - LabeledExprVisitor.java
 - y algunos .tokens / .interp.
 
-6 Error 
-**UnsupportedClassVersionError: Calc has been compiled by a more recent version 
-of the Java Runtime (class file version 65.0), this version ... up to 61.0**
 
-Esto significa:
-
-- Tu javac (compilador) es Java 21 (class file version 65.0).
-- Tu java (runtime) es Java 17 (class file version 61.0).
-- Es decir, compilaste con una versión más nueva que la que tienes para ejecutar.
-
-SOLUCION
-```bash
-rm -f *.class
-javac --release 17 -cp .:"$ANTLR_JAR" *.java
-```
 ### Ejecucion 
 sin interacturar
 ```bash
