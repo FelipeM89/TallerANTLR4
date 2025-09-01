@@ -210,7 +210,7 @@ grun LabeledExpr prog -gui
 ```
 modo interactivo 
 ```bash
-java -cp .:"$ANTLR_JAR" Calc
+java -cp .:/usr/local/lib/antlr-4.13.2-complete.jar Calc  
 ```
 ## COMANDO UTILES 
 ```bash
