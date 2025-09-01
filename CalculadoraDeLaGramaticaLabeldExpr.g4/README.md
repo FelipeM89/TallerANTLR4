@@ -49,7 +49,7 @@ mkdir -p ~/antlr-calc
 cd ~/antlr-calc
 
 # si tu JAR está en /usr/local/lib y se llama antlr-4.13.1-complete.jar:
-ANTLR_JAR=/usr/local/lib/antlr-4.13.1-complete.jar
+ANTLR_JAR=/usr/local/lib/antlr-4.13.2-complete.jar
 
 # verifica que exista
 ls -l "$ANTLR_JAR"
