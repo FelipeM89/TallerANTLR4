@@ -43,21 +43,25 @@ public class EvalVisitor extends LabeledExprBaseVisitor<Integer> {
     }
 
     // expr: expr ('*'|'/') expr -> MulDiv
-    @Override
+@Override
     public Double visitMulDiv(LabeledExprParser.MulDivContext ctx) {
-       double left = visit(ctx.expr(0));
-       double right = visit(ctx.expr(1));
+        double left = visit(ctx.expr(0));
+        double right = visit(ctx.expr(1));
 
-       if (ctx.op.getText().equals("*")) {
-            return left * right;
-       } else { // división
-            if (right == 0) {
-                System.err.println("⚠️ Error: división por cero");
-                return Double.NaN; 
-       return left / right;
-     } 
-   }
-
+        return switch (ctx.op.getType()) {
+            case LabeledExprParser.MUL -> left * right;
+            case LabeledExprParser.DIV -> {
+                if (right == 0) {
+                    System.err.println("Error: División por cero");
+                    return null;
+                }
+                return left / right;
+            }
+            case LabeledExprParser.MOD -> left % right;
+            case LabeledExprParser.POW -> Math.pow(left, right);
+            default -> 0.0;
+        };
+    }
 
     // expr: expr ('+'|'-') expr -> AddSub
     @Override
