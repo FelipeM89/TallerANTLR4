@@ -44,12 +44,21 @@ public class EvalVisitor extends LabeledExprBaseVisitor<Integer> {
 
     // expr: expr ('*'|'/') expr -> MulDiv
     @Override
-    public Integer visitMulDiv(LabeledExprParser.MulDivContext ctx) {
-        int left = visit(ctx.expr(0));
-        int right = visit(ctx.expr(1));
-        if (ctx.op.getText().equals("*")) return left * right;
-        return left / right; // división entera (como en el tour)
-    }
+    public Double visitMulDiv(LabeledExprParser.MulDivContext ctx) {
+       double left = visit(ctx.expr(0));
+       double right = visit(ctx.expr(1));
+
+       if (ctx.op.getText().equals("*")) {
+            return left * right;
+       } else { // división
+            if (right == 0) {
+                System.err.println("⚠️ Error: división por cero");
+                return Double.NaN; // o Double.POSITIVE_INFINITY si prefieres
+       }
+       return left / right;
+     } 
+   }
+
 
     // expr: expr ('+'|'-') expr -> AddSub
     @Override
